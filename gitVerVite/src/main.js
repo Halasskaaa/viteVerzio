@@ -6,5 +6,5 @@ const successMessage = document.getElementById('successMessage');
 form.addEventListener('submit', e => {
   e.preventDefault();
   form.reset();
-  successMessage.textContent = 'Sikeres regisztráció';
+  successMessage.innerHTML = '<h2><b>Sikeres regisztráció</b></h2>';
 });
