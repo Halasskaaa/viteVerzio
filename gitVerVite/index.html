@@ -3,38 +3,47 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Regisztrációs űrlap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_register_form -->
 
-<body>
+<body class="bg-light">
   <form action="/action_page.php">
     <div class="container">
-      <h1>Register</h1>
-      <p>Please fill in this form to create an account.</p>
+      <h1>Regisztrációs űrlap</h1>
+      <p>Kérjük, töltse ki ezt az űrlapot fiók létrehozásához.</p>
       <hr>
+
+      <label for="name"><b>Név</b></label>
+      <input type="text" placeholder="Adja meg a nevét" name="name" id="name" required>
 
       <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" id="email" required>
+      <input type="text" placeholder="Adja meg az Email-t" name="email" id="email" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+      <label for="psw"><b>Jelszó</b></label>
+      <input type="password" placeholder="Adja meg a jelszót" name="psw" id="psw" required>
 
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+      <label for="psw-repeat"><b>Jelszó ismétlése</b></label>
+      <input type="password" placeholder="Ismételje meg a jelszót" name="psw-repeat" id="psw-repeat" required>
       <hr>
-      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+      <p>Fiók létrehozásával Ön elfogadja a <a href="#">Felhasználási Feltételeinket és Adatvédelmi irányelveinket.</a>.</p>
 
-      <button type="submit" class="registerbtn">Register</button>
+      <button type="submit" class="registerbtn">Regisztrálás</button>
     </div>
 
     <div class="container signin">
-      <p>Already have an account? <a href="#">Sign in</a>.</p>
+      <p>Már van fiókja? <a href="#">Bejelentkezés</a>.</p>
     </div>
   </form>
+
+  <div id="successMessage" class="text-success mt-2"></div>
+
+  <footer class="container">
+    Készítette: Phan Thi Linh Tra
+  </footer>
 
   <script type="module" src="/src/main.js"></script>
 </body>
